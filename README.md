@@ -1,6 +1,6 @@
 Kubernetes CourseLabs Hackathon
 
-Welcome to my submission for the [Kubernetes CourseLabs Hackathon](https://kubernetes.courselabs.co/hackathon/)!  
+Welcome to our submission for the [Kubernetes CourseLabs Hackathon](https://kubernetes.courselabs.co/hackathon/)!  
 This repository contains completed labs, custom configurations, and monitoring dashboards — all done locally using **Minikube**, **Helm**, **Prometheus**, and **Grafana**.
 
 
