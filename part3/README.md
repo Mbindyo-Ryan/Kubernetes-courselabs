@@ -1,4 +1,4 @@
-Delete the database that was bei used before by using:
+Delete the database that was being used before by using:
 
 ```
 kubectl delete deploy products-db
