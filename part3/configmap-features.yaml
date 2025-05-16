@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: web-features
 data:
-  Widgetario__Theme: dark
+ # Sets the theme for Widgetario to dark mode
+  Widgetario__Theme: dark 

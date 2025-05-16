@@ -25,8 +25,8 @@ spec:
           volumeMounts:
             - name: db-properties
               mountPath: "/app/config"
-              readOnly: true
+              readOnly: true  # Mounting secret as read-only for security
       volumes:
         - name: db-properties
           secret:
-            secretName: products-api-db
+            secretName: products-api-db # Provides database credentials securely

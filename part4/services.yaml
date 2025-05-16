@@ -4,7 +4,7 @@ metadata:
   name: ingress-nginx-controller-lb
   namespace: ingress-nginx
 spec:
-  type: LoadBalancer
+  type: LoadBalancer # Exposes Ingress controller externally via cloud provider LB
   ports:
     - name: http
       port: 80

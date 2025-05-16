@@ -7,8 +7,8 @@ metadata:
 spec:
   ports:
     - port: 80
-      targetPort: http
+      targetPort: http # Routes traffic to the stock-api container's HTTP port (8080)
   selector:
     app: widgetario
     component: stock-api
-  type: ClusterIP
+  type: ClusterIP # Internal service, exposes only within the Kubernetes cluster

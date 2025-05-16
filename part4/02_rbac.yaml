@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: ingress-nginx
-  namespace: ingress-nginx
+  namespace: ingress-nginx # Service account used by the ingress controller
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -38,7 +38,7 @@ rules:
       - watch
   - apiGroups:
       - extensions
-      - networking.k8s.io   # k8s 1.14+
+      - networking.k8s.io   # Support for ingress across Kubernetes versions
     resources:
       - ingresses
     verbs:
@@ -80,7 +80,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: ingress-nginx
-    namespace: ingress-nginx
+    namespace: ingress-nginx # Grants ClusterRole to the ingress controller service account
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -125,13 +125,13 @@ rules:
       - watch
   - apiGroups:
       - extensions
-      - networking.k8s.io   # k8s 1.14+
+      - networking.k8s.io   
     resources:
       - ingresses/status
     verbs:
       - update
   - apiGroups:
-      - networking.k8s.io   # k8s 1.14+
+      - networking.k8s.io   
     resources:
       - ingressclasses
     verbs:
@@ -179,4 +179,4 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: ingress-nginx
-    namespace: ingress-nginx
+    namespace: ingress-nginx # Binds namespace-specific Role to the ingress controller service account

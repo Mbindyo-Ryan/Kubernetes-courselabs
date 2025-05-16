@@ -7,9 +7,9 @@ metadata:
 spec:
   ports:
     - port: 5432
-      targetPort: postgres
+      targetPort: postgres # Directs traffic to the PostgreSQL database port
   selector:
     app: widgetario
     component: products-db
   type: ClusterIP
-  clusterIP: None
+  clusterIP: None # Headless service to enable direct pod-to-pod communication

@@ -27,7 +27,7 @@ spec:
                 name: stock-api-connection
           volumeMounts:
             - name: cache
-              mountPath: "/cache"
+              mountPath: "/cache" # Temporary storage for caching within the container
       volumes:
         - name: cache
-          emptyDir: {}
+          emptyDir: {} # Ephemeral volume that lasts only as long as the pod is running

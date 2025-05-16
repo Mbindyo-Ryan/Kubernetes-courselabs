@@ -5,6 +5,6 @@ metadata:
     app.kubernetes.io/component: controller
   name: nginx
   annotations:
-    ingressclass.kubernetes.io/is-default-class: "true"
+    ingressclass.kubernetes.io/is-default-class: "true" # Marks this as the default IngressClass
 spec:
-  controller: k8s.io/ingress-nginx
+  controller: k8s.io/ingress-nginx  # Must match the controller specified in the Ingress controller

@@ -11,7 +11,7 @@ spec:
   selector:  
     app: widgetario
     component: web
-  type: LoadBalancer
+  type: LoadBalancer # Exposes service externally with a cloud provider's load balancer
 ---
 apiVersion: v1
 kind: Service
@@ -23,8 +23,8 @@ spec:
   ports:
     - port: 8080
       targetPort: http
-      nodePort: 30008
+      nodePort: 30008 # Fixed node port for external access on each node
   selector:
     app: widgetario
     component: web
-  type: NodePort
+  type: NodePort # Exposes service on a static port on each cluster node for external access
