@@ -48,19 +48,7 @@ Lab 7: Monitoring (Prometheus + Grafana)
 
 
 
-Highlight: Grafana Dashboards
 
- All metrics are from `widgetario` namespace running `nginx` containers.
-
- Panel 1: Container Memory Usage by Namespace
-
-![Widgetario Panel](./a9ace091-c659-4d80-85a6-5eae96454977.png)
-
-
-
-Panel 2: Cluster-wide Memory Usage
-
-![Memory Usage Panel](./dd4c70d6-94f7-4feb-ace4-f758c7b9767a.png)
 
 
 Project Structure:
